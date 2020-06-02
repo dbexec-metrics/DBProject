@@ -22,9 +22,13 @@ ENSURE that the main directory will consist of
 HADOOP APIs
 
 http://hadoop1.example.com:8088/ws/v1/cluster/apps
+
 http://hadoop1.example.com:8088/ws/v1/cluster/info 
+
 http://hadoop1.example.com:8088/ws/v1/cluster/metrics 
+
 hadoop1.example.com:8088/ws/v1/cluster/apps/{app-id}
+
     (For example:- hadoop1.example.com:8088/ws/v1/cluster/apps/application_1476912658570_0002)
     
     
@@ -33,11 +37,10 @@ SPARK APIs
 Depending on the number of spark applications currently running the port number may vary from 4040 to 4041,4042 and so on,...
 So for example a spark application running on port number 4042 is given below:
 
-http://hadoop1.example.com:404x/api/v1/applications/        
+http://hadoop1.example.com:404x/api/v1/applications/    
+
 http://hadoop1.example.com:4042/api/v1/applications/local-1590606125695/allexecutors
 
-
-    
 
 React.js form:
 ----------------
