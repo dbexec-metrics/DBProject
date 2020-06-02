@@ -1,0 +1,5 @@
+== Analyzed Logical Plan ==
+Clg: string, Name: string, grade: bigint
+Project [Clg#0, Name#1, grade#2L]
++- SubqueryAlias a
+   +- Relation[Clg#0,Name#1,grade#2L] json
