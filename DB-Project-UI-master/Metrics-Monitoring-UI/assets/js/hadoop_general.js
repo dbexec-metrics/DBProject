@@ -217,6 +217,11 @@ md = {
         var value2 = JSON.parse(mdata).key2;
         console.log(value1);
         console.log(value2);
+		var str = " --- Application ID --- "
+		var strr = str.bold();
+		var str1 = " --- Name --- "
+		var str12 = str1.bold();
+		document.getElementById("iddd1").innerHTML += strr + value2.bold() + str12 + value1.bold();
         var h = 0;
         var xx = [];
         var amba = [], avca = [], rca = [], msa = [], vsa = [], cupa = [], prma = [], prva = [];
@@ -239,14 +244,15 @@ md = {
         function myvar() {
            // var url1 = "http://hadoop1.example.com:" + value1 + "/api/v1/applications/" + value2 + "/allexecutors";
           //  var url1 = "http://hadoop1.example.com:4042/api/v1/applications/local-1590606125695/allexecutors";
-		  var uri1 = "http://hadoop1.example.com:8088/ws/v1/cluster/apps"+value2;
+		  var url1 = "http://hadoop1.example.com:8088/ws/v1/cluster/apps/"+value2;
+		  console.log(value2);
             console.log(url1);
             getJSON(url1, function (err, data) {
                 if (err !== null) {
                     console.log('Something went wrong: ' + err);
                 } else {
-                    console.log(data[0]);
-                    myFunction10(data[0]);
+                    console.log(data.app);
+                    myFunction10(data.app);
                 }
             });
             function myFunction10(arr1) {
@@ -293,7 +299,7 @@ md = {
                  console.log(amba);
                 //console.log(h);
                 xx.push(h);
-                if (h == 5) {
+                if (h == 15) {
                     clearInterval(mytimer);
                 }
             }
@@ -422,7 +428,7 @@ md = {
                 //md.startAnimationForLineChart(dailySalesChart);
             }
 
-            if ($('#dailySalesChart5').length != 0) {
+            /*if ($('#dailySalesChart5').length != 0) {
 
 
                 dataCompletedTasksChart = {
@@ -447,7 +453,7 @@ md = {
                 var completedTasksChart = new Chartist.Line('#dailySalesChart5', dataCompletedTasksChart, optionsCompletedTasksChart);
 
                 //md.startAnimationForLineChart(completedTasksChart);
-            }
+            }*/
 
             if ($('#dailySalesChart6').length != 0) {
 

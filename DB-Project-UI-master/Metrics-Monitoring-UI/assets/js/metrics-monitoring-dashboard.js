@@ -494,7 +494,7 @@ md = {
                     tension: 0
                 }),
                 low: 0,
-                high: 1000,
+                high: 5,
                 chartPadding: {
                     top: 0,
                     right: 0,
@@ -520,7 +520,7 @@ md = {
                     showGrid: false
                 },
                 low: 0,
-                high: 1000,
+                high: 5,
                 chartPadding: {
                     top: 0,
                     right: 5,
@@ -555,7 +555,7 @@ md = {
                     tension: 0
                 }),
                 low: 0,
-                high: 50,
+                high: 5,
                 chartPadding: {
                     top: 0,
                     right: 0,
@@ -608,7 +608,7 @@ md = {
                     showGrid: false
                 },
                 low: 0,
-                high: 1000,
+                high: 5,
                 chartPadding: {
                     top: 0,
                     right: 0,

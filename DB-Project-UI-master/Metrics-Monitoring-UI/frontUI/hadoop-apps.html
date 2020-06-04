@@ -433,7 +433,7 @@
   //console.log(parent_elem);
   //elem.addEventListener('click',() => { location.href = uri; }, false);
 	var uri = "http://hadoop1.example.com:"+8088+"/ws/v1/cluster/apps";
-	//console.log(uri);
+	console.log(uri);
 	var xmlhttp1 = new XMLHttpRequest();
 	xmlhttp1.open("GET", uri, true);
 	xmlhttp1.setRequestHeader("Access-Control-Allow-Origin","*");
@@ -443,7 +443,7 @@
 			var myArr1 = JSON.parse(this.responseText);
 			console.log(myArr1.apps.app.length);
 			//console.log(h);
-			console.log(h);
+			//console.log(h);
 			//console.log(myArr1.clusterMetrics.availableVirtualCores);
 			//let clone = elem.cloneNode(true);
 			//clone.id = 'card'+h+1;
@@ -455,10 +455,10 @@
 			//clone.addEventListener('click',() => { location.href = uri; }, false);
 			//elem.after(clone);
 			//elem = clone;
-			for(int i=0; i<myArr1.apps.app.length;i++)
+			for(var i=0; i<myArr1.apps.app.length;i++)
 			{
 				var uri12 = "./hadoop_general.html";
-				let str = `<div class="card-header card-header-success card-header-icon"><div class="card-icon"><i class="material-icons">content_copy</i></div><p class="card-category" id='check${h}'>Current Hadoop Version</p></div><div class="card-footer"><div class="stats"><i class="material-icons text-warning">local_offer</i><a href="javascript:;" >Click to know more details</a></div></div>`;
+				let str = `<div class="card-header card-header-success card-header-icon"><div class="card-icon"><i class="material-icons">content_copy</i></div><p class="card-category" id='check${i}'>Current Hadoop Version</p></div><div class="card-footer"><div class="stats"><i class="material-icons text-warning">local_offer</i><a href="javascript:;" >Click to know more details</a></div></div>`;
 				let div = document.createElement('div');
 				div.innerHTML = str;
 				div.className = "card card-stats";
@@ -467,7 +467,7 @@
 				console.log(myArr1.apps.app[i].id);
 				div.addEventListener('click',() => { location.href = uri12; localStorage.setItem("otp1",JSON.stringify(mydata)); console.log(mydata);}, false);
 				parent_elem.appendChild(div);
-				let para = document.getElementById(`check${h}`);
+				let para = document.getElementById(`check${i}`);
 				para.innerHTML = "Name"+" : "+myArr1.apps.app[i].name+"    "+"Application_ID"+" : "+ myArr1.apps.app[i].id;
 			}
 		}
